@@ -1,0 +1,23 @@
+@startuml physical
+
+package "Client Device" {
+  [User Interface]
+}
+
+database "Database Server" {
+  [User Data]
+  [Recipe Data]
+}
+
+database "API Server" {
+  [Map Data]
+  [Fish Data]
+}
+
+
+[User Interface] --> [User Data]
+[User Interface] --> [Recipe Data]
+[User Interface] --> [Fish Data]
+[User Interface] --> [Map Data]
+
+@enduml

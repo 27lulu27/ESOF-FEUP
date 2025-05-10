@@ -1,0 +1,19 @@
+@startuml logical
+
+top to bottom direction
+
+package "MarineChoice System" {
+  [MarineChoice Application]
+  [Recipe Validation]
+  [Database]
+}
+
+package "External Services" {
+  [Admin Gateway]
+}
+
+[MarineChoice Application] -> [Recipe Validation]
+[Recipe Validation] -> [Database]
+[Recipe Validation] --> [Admin Gateway]
+
+@enduml
